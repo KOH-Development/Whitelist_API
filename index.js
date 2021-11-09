@@ -5,14 +5,14 @@ const { exit } = require("process");
 const cors=require("cors");
 require('dotenv').config()
 
-app.use(exp.json());
 const corsOptions ={
    origin:'*', 
    credentials:true,
     optionSuccessStatus: 200,
     methods: "GET, PUT"
 }
-app.use(cors(corsOptions))
+app.use(cors(corsOptions));
+app.use(exp.json());
 
 
 let csvToJson = require('convert-csv-to-json');
