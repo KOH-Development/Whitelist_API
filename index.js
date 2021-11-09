@@ -9,7 +9,8 @@ app.use(exp.json());
 const corsOptions ={
    origin:'*', 
    credentials:true,
-   optionSuccessStatus:200,
+    optionSuccessStatus: 200,
+    methods: "GET, PUT"
 }
 app.use(cors(corsOptions))
 
